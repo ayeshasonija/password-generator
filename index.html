@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mhaeding">Password Generator</h1>
+        <div class="password-display">
+            <input type="text" id="password" readonly>
+            <button id="copy-button" onclick="copyPassword()"><i class="fa-regular fa-copy"></i></button>
+            <button id="generate-button" onclick="generatePassword()"><i class="fa-solid fa-arrows-rotate"></i></button>
+        </div>
+        <div class="customization">
+            <h2>Customize your password</h2>
+            <div class="option">
+                <label for="length">Password Length</label>
+                <input type="range" id="length" min="4" max="32" value="12" oninput="this.nextElementSibling.value = this.value">
+                <output>12</output>
+            </div>
+            <div class="option">
+                <label>
+                    <input type="checkbox" id="uppercase" checked> Uppercase
+                </label>
+                <label>
+                    <input type="checkbox" id="lowercase" checked> Lowercase
+                </label>
+                <label>
+                    <input type="checkbox" id="numbers" checked> Numbers
+                </label>
+                <label>
+                    <input type="checkbox" id="symbols" checked> Symbols
+                </label>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
